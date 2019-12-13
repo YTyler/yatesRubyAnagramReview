@@ -15,7 +15,7 @@ describe ('#anagram') do
 
   it('all input words must have a vowel') do
     test_word = Word.new('eat')
-    test_word.anagram?('tvwk')
+    expect(test_word.anagram?('tvwk')).to(eq("One of your entries is invalid"))
   end
 
 end

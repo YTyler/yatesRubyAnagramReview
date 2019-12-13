@@ -13,7 +13,7 @@ class Word
         return "These are not anagrams"
       end
     else
-      return "one of your entries is invalid"
+      return "One of your entries is invalid"
     end
 
   end
