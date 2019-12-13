@@ -13,4 +13,9 @@ describe ('#anagram') do
     expect(test_word.anagram?('TeA')).to(eq('These are anagrams'))
   end
 
+  it('all input words must have a vowel') do
+    test_word = Word.new('eat')
+    test_word.anagram?('tvwk')
+  end
+
 end
