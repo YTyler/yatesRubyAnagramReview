@@ -6,13 +6,26 @@ class Word
 
   def anagram?(check)
     check_value = check.downcase.bytes.sum
-    if @value == check_value
-      return 'These are anagrams'
+    if self.vowel?(check)
+      if @value == check_value
+        return 'These are anagrams'
+      else
+        return "These are not anagrams"
+      end
     else
-      return "These are not anagrams"
-      puts @value
-      puts check_value
+      return "one of your entries is invalid"
     end
+
   end
+
+  def vowel?(test)
+    if test[/(['aeiou'])/i] && @word[/(['aeiou'])/i]
+      return true
+    else
+      return false
+    end
+
+  end
+
 
 end
