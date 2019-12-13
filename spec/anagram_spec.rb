@@ -18,4 +18,8 @@ describe ('#anagram') do
     expect(test_word.anagram?('tvwk')).to(eq("One of your entries is invalid"))
   end
 
+  if('checks if entries are antigrams (contain no similar letters)') do
+    test_word = Word.new('unique')
+    expect(test_word.anagram?('copy')).to(eq('These are antigrams'))
+  end
 end
