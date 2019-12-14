@@ -29,6 +29,5 @@ class Word
     end
 
   end
-
-
+  
 end
