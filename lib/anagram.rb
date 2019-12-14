@@ -1,11 +1,11 @@
 class Word
   def initialize(word)
-    @word = word.downcase
+    @word = word.downcase.gsub(/([^a-z])/, "")
     @value = @word.bytes.sum
   end
 
   def anagram?(check)
-    check_word = check.downcase
+    check_word = check.downcase.gsub(/([^a-z])/, "")
     check_value = check_word.bytes.sum
     if self.vowel?(check_word) #check if entries are both words
       if @value == check_value
