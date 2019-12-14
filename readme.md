@@ -14,6 +14,8 @@ Currently the project can be accessed by downloading or cloning the repository a
 
 The repository can be found [here](https://github.com/YTyler/rubyWeek1Day3)
 
+After cloning be sure to run 'bundle install' from the home directory to install the required gems
+
 ## Known Bugs
 
 * No known bugs at this time
@@ -30,11 +32,12 @@ _The author can be contacted at tyates907@gmail.com_
 
 Specification | Example Inputs | Example Outputs
 --- | --- | ---
-Recognizes single word anagrams| eat/tea, cider/cried, brag/grab  | 
-Recognizes single word antigrams (pairs containing no similar letters)| unique, left, none | copy, up, all
-Disregards odd capitalizations|('small', ['pepperoni', 'chicken'])| $10
-Entries must be words|('small', ['pepperoni', 'chicken'], ['olives', 'onions'])| $12
-Recognizes multiple word anagrams and antigrams|input|output
+Recognizes single word anagrams| eat/tea, cider/cried, brag/grab  | These are anagrams
+Recognizes single word antigrams (pairs containing no similar letters)| unique/copy, left/up, none/all | These are antigrams
+Disregards odd capitalizations|eAt/TeA, ciDer/Cried| These are anagrams
+Disregards Punctuation| e()at/tea!, ci,der/cried. | These are anagrams
+Entries must be words|word/tvwrk, flrp/true, ghpd/ytrp|One of your entries is invalid
+Recognizes multiple word anagrams and antigrams|I am Lord Voldemort/Tom Marvolo Riddle|These are anagrams
 
 ### License
 
